@@ -1,0 +1,24 @@
+#mybatis
+server:
+  port: 8081
+  servlet:
+    context-path: /Student
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver #mysql??
+    url: jdbc:mysql://localhost:3306/yangstudent?charaterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  jackson:
+    time-zone: GMT+8
+
+mybatis:
+  mapper-locations: classpath:com/yang/mapper/*.xml
+  type-aliases-package: com.yang.entity
+
